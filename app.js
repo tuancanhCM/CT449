@@ -13,8 +13,6 @@ app.get("/", (req, res) => {
 
 setupContactRoutes(app);
 
-module.exports = app;
-
 app.use((req, res, next) => {
     next(new BadRequestError(404, "Resource not found"));
 });
